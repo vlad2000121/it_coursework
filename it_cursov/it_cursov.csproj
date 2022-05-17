@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D75E13F6-90EE-4A17-92C2-DB11FA100575}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>it_cursov</RootNamespace>
+    <AssemblyName>it_cursov</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\City.cs" />
+    <Compile Include="Context\Corpus.cs" />
+    <Compile Include="Context\PowerSupply.cs" />
+    <Compile Include="Context\RAM.cs" />
+    <Compile Include="Context\StorageDevice.cs" />
+    <Compile Include="Context\Store.cs" />
+    <Compile Include="Context\Zakaz.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\GraphicsCard.cs" />
+    <Compile Include="Context\MatPlata.cs" />
+    <Compile Include="Context\Proc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context\User.cs" />
+    <Compile Include="Context\UserContext.cs" />
+    <Compile Include="SelectionCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionCity.Designer.cs">
+      <DependentUpon>SelectionCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectionStore.Designer.cs">
+      <DependentUpon>SelectionStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddCorpus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddCorpus.Designer.cs">
+      <DependentUpon>AddCorpus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddMatPlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddMatPlat.Designer.cs">
+      <DependentUpon>AddMatPlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddPower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddPower.Designer.cs">
+      <DependentUpon>AddPower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddProc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddProc.Designer.cs">
+      <DependentUpon>AddProc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddRAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddRAM.Designer.cs">
+      <DependentUpon>AddRAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Addstoragedevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Addstoragedevice.Designer.cs">
+      <DependentUpon>Addstoragedevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddStore.Designer.cs">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddUsers.Designer.cs">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\AddVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\AddVideo.Designer.cs">
+      <DependentUpon>AddVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Korzina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Korzina.Designer.cs">
+      <DependentUpon>Korzina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Zakazs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Zakazs.Designer.cs">
+      <DependentUpon>Zakazs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelectionCity.resx">
+      <DependentUpon>SelectionCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectionStore.resx">
+      <DependentUpon>SelectionStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddCorpus.resx">
+      <DependentUpon>AddCorpus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddMatPlat.resx">
+      <DependentUpon>AddMatPlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddPower.resx">
+      <DependentUpon>AddPower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddProc.resx">
+      <DependentUpon>AddProc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddRAM.resx">
+      <DependentUpon>AddRAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Addstoragedevice.resx">
+      <DependentUpon>Addstoragedevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddStore.resx">
+      <DependentUpon>AddStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddUsers.resx">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\AddVideo.resx">
+      <DependentUpon>AddVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Korzina.resx">
+      <DependentUpon>Korzina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Zakazs.resx">
+      <DependentUpon>Zakazs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Corpus.datasource" />
+    <None Include="Properties\DataSources\GraphicsCard.datasource" />
+    <None Include="Properties\DataSources\it_cursov.Context.PowerSupply.datasource" />
+    <None Include="Properties\DataSources\it_cursov.Context.RAM.datasource" />
+    <None Include="Properties\DataSources\it_cursov.Context.StorageDevice.datasource" />
+    <None Include="Properties\DataSources\it_cursov.Context.Store.datasource" />
+    <None Include="Properties\DataSources\it_cursov.Context.Zakaz.datasource" />
+    <None Include="Properties\DataSources\MatPlata.datasource" />
+    <None Include="Properties\DataSources\Proc.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kursk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voron.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
